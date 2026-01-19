@@ -8,35 +8,45 @@
 
         <h1>Virtual Pet Generator</h1>
         
+        <!-- Input field which allows user to change the pet's name -->
         <label>
             Pet Name:
             <input type="text" id="nameInput" />
         </label>
 
+        <!-- Buttons which allows user to change pet's age by increasing and decreasing -->
         <div>
             <button onclick="increaseAge()">Increase Age</button>
             <button onclick="decreaseAge()">Decrease Age</button>
         </div>
 
+        <!-- Button which allows user to toggle whether pet is hungry or not -->
         <div>
             <button onclick="toggleHunger()">Toggle Hunger</button>
         </div>
 
         <h2>Pet Description</h2>
+
+        <!-- Paragraph dynamically updated using JavaScript -->
         <p id="petDescription"></p>
 
         <script>
-            let petName = "Lior";
+            
+            // Stores the pet's name 
+            let petName = "";
 
+            // Arrays containing possible pet types, moods and activities
             const petTypes = ["dragon", "unicorn", "wyvern", "griffin"]
             const moods = ["happy", "sleepy", "excited", "grumpy"]
-
             let favActivities = ["playing", "sleeping", "eating", "exploring"];
+            
+            // Randomly generates pet's attributes when page loads
             let petType = petTypes [Math.floor(Math.random() * petTypes.length)];
             let petAge = Math.floor(Math.random() * 10) + 1;
             let isHungry = Math.random() < 0.5;
             let mood = moods[Math.floor(Math.random() * moods.length)];
 
+            // Updates pet's description text on the page
             function updateDescription() 
             {
                 const hungerStatus = isHungry ? "hungry" : "not hungry"
@@ -46,32 +56,38 @@
                 "Meet " + petName + ", a " + petAge + "-year-old " + petType + " who loves " + activity + " and is currently feeling " + mood + ". They are " + hungerStatus + "!";
             }
 
+            // Updates pet's name as the user types
             document.getElementById("nameInput").addEventListener("input", function()
             {
-                petName = this.value || "Lior";
+                petName = this.value || "";
                 updateDescription();
             });
 
+            // Increases the pet's age by 1
             function increaseAge() 
             {
-                petAge += 1;
+                petAge++ ;
                 updateDescription();
             }
 
+            // Decreases the pet's age by 1 as long as it does not go below 1
             function decreaseAge()
             {
-                if (petAge > 0)
+                if (petAge > 1)
                 {
-                    petAge -= 1;
+                    petAge--;
                 }
                 updateDescription();
             }
 
+            // Toggles the pet's hunger status
             function toggleHunger() 
             {
                 isHungry = !isHungry;
                 updateDescription();
             }
+
+            // Initial display of pet's description when the page loads
             updateDescription();
         </script>
     </body>
