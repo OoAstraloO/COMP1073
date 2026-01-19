@@ -46,6 +46,32 @@
                 "Meet " + petName + ", a " + petAge + "-year-old " + petType + " who loves " + activity + " and is currently feeling " + mood + ". They are " + hungerStatus + "!";
             }
 
+            document.getElementById("nameInput").addEventListener("input", function()
+            {
+                petName = this.value || "Lior";
+                updateDescription();
+            });
+
+            function increaseAge() 
+            {
+                petAge += 1;
+                updateDescription();
+            }
+
+            function decreaseAge()
+            {
+                if (petAge > 0)
+                {
+                    petAge -= 1;
+                }
+                updateDescription();
+            }
+
+            function toggleHunger() 
+            {
+                isHungry = !isHungry;
+                updateDescription();
+            }
         </script>
     </body>
 </html>
