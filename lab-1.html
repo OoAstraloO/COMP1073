@@ -22,7 +22,7 @@
             <button onclick="toggleHunger()">Toggle Hunger</button>
         </div>
 
-        <h2></h2>
+        <h2>Pet Description</h2>
         <p id="petDescription"></p>
 
         <script>
@@ -30,12 +30,12 @@
 
             const petTypes = ["dragon", "unicorn", "wyvern", "griffin"]
             const moods = ["happy", "sleepy", "excited", "grumpy"]
-            let favActivities = ["playing", "sleeping", "eating", "exploring"];
 
+            let favActivities = ["playing", "sleeping", "eating", "exploring"];
             let petType = petTypes [Math.floor(Math.random() * petTypes.length)];
             let petAge = Math.floor(Math.random() * 10) + 1;
             let isHungry = Math.random() < 0.5;
-            let mood = moods[math.floor(Math.random() * moods.lenfth)];
+            let mood = moods[math.floor(Math.random() * moods.length)];
 
             function updateDescription() 
             {
