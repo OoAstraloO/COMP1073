@@ -35,7 +35,7 @@
             let petType = petTypes [Math.floor(Math.random() * petTypes.length)];
             let petAge = Math.floor(Math.random() * 10) + 1;
             let isHungry = Math.random() < 0.5;
-            let mood = moods[math.floor(Math.random() * moods.length)];
+            let mood = moods[Math.floor(Math.random() * moods.length)];
 
             function updateDescription() 
             {
@@ -72,6 +72,7 @@
                 isHungry = !isHungry;
                 updateDescription();
             }
+            updateDescription();
         </script>
     </body>
 </html>
