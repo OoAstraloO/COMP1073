@@ -1,0 +1,95 @@
+* 
+{
+    box-sizing: border-box;
+}
+body 
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #49adff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333333;
+}
+.container 
+{
+    background: #f7ec55;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+    box-shadow: 0 15px 35px #00000033;
+}
+/* Heading styles */
+h1 
+{
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: 25px;
+}
+
+/* Button styles */
+button 
+{
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover 
+{
+    background-color: #606161;
+    color: #ffffff;
+}
+/* Toggle button style */
+.toggle 
+{
+    background-color: #ffffff;
+    color: #000000;
+}
+.character 
+{
+    background-color: #cb68df;
+}
+.action 
+{
+    background-color: #8bd2f3;
+}
+.object 
+{
+    background-color: #98ff79;
+}
+.place 
+{
+    background-color: #ffb347;
+}
+.emotion 
+{
+    background-color: #ff96e5;
+}
+.show 
+{
+    background-color: #747dfc;
+}
+.random 
+{
+    background-color: #72ffd0;
+}
+.reset 
+{
+    background-color: #fc4e71;
+}
+
+/* Story output area */
+#storyOutput {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 40px;
+}
