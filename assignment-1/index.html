@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>COMP1073 | Assignment 1 - Virtual Storymaker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <title>COMP1073 | Assignment 1 - Virtual Storymaker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+        <!--Links external CSS-->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-<body>
+    <body>
+        <!--Main container for storymaker-->
+        <div class="container">
+            <h1>The Virtual Storymaker</h1>
 
-<div class="container">
-    <h1>The Virtual Storymaker</h1>
+            <!--Story Set Toggle Button-->
+            <div id="switchSet">
+                <button id="toggle" class="toggle">Switch Story Set</button>
+            </div>
+            <!--Story Buttons-->
+            <div class="story-buttons">
+                <button id="character" class="character">Character</button>
+                <button id="action" class="action">Action</button>
+                <button id="object" class="object">Object</button>
+                <button id="place" class="place">Place</button>
+                <button id="emotion" class="emotion">Emotion</button>
+            </div>
+            <!--Action Buttons-->
+            <div class="action-buttons">
+                <button id="show" class="show">Show Story</button>
+                <button id="random" class="random">Random Story</button>
+                <button id="reset" class="reset">Reset</button>
 
-    <div id="switchSet">
-        <button id="toggle" class="toggle">Switch Story Set</button>
+            </div>
 
-    </div>
-    <div class="story-buttons">
-        <button id="character">Character</button>
-        <button id="action">Action</button>
-        <button id="object">Object</button>
-        <button id="place">Place</button>
-        <button id="emotion">Emotion</button>
-    </div>
+            <div id="storyOutput"></div>
+        </div>
 
-    <div class="action-buttons">
-        <button id="show">Show Story</button>
-        <button id="random">Random Story</button>
-        <button id="reset" class="reset">Reset</button>
+        <!--Links external JavaScript-->
+        <script src="js/script.js"></script>
 
-    </div>
-
-    <div id="storyOutput"></div>
-</div>
-
-<script src="js/script.js"></script>
-
-</body>
+    </body>
 </html>

@@ -74,7 +74,7 @@ function cyclePart(partName, buttonElement)
 // Combines selected story parts into a full story and displays it, also speaking the story aloud
 function showStory() 
 {
-
+    // Combines the selected parts into a full story in order
     const story =
         currentSet.character[selections.character] + " " +
         currentSet.action[selections.action] + " " +
@@ -82,19 +82,22 @@ function showStory()
         currentSet.place[selections.place] + " " +
         currentSet.emotion[selections.emotion];
 
+    // Displays the story in the output area
     output.textContent = story;
 
     speakStory(story);
 }
 
+// Generates a completely random story by selecting random options for each part
 function randomStory() 
 {
-
+    // Loops through each part and selects a random index
     for (let part in selections) 
     {
         selections[part] = Math.floor(Math.random() * currentSet[part].length);
     }
 
+    // Updates all buttons to reflect the new random selections
     characterButton.textContent = currentSet.character[selections.character];
     actionButton.textContent = currentSet.action[selections.action];
     placeButton.textContent = currentSet.place[selections.place];
@@ -104,9 +107,10 @@ function randomStory()
     showStory();
 }
 
+// Resets all selections and buttons to default state
 function resetStory() 
 {
-
+    // Resets selection indexes
     selections = 
     {
         character: 0,
@@ -116,21 +120,24 @@ function resetStory()
         emotion: 0
     };
 
+    // Resets button text to default labels
     characterButton.textContent = "Character";
     actionButton.textContent = "Action";
     placeButton.textContent = "Place";
     objectButton.textContent = "Object";
     emotionButton.textContent = "Emotion";
 
+    // Clears story output
     output.textContent = "";
 }
 
+// Toggles between the story sets
 function toggleStorySet() 
 {
     currentSet = (currentSet === storySet1) ? storySet2 : storySet1;
     resetStory();
 }
-
+// Speaks the given text using the brower's speech synthesis capabilities
 function speakStory(text) 
 {
 
@@ -139,17 +146,26 @@ function speakStory(text)
     speech.pitch = 1;
     speech.volume = 1;
 
-    window.speechSynthesis.cancel(); // prevents overlap
+    // Stops any previous speech to prevent overlap
+    window.speechSynthesis.cancel();
     window.speechSynthesis.speak(speech);
 }
 
+// Cycles through options when a story part button is clicked
 characterButton.addEventListener("click", () => cyclePart("character", characterButton));
 actionButton.addEventListener("click", () => cyclePart("action", actionButton));
 placeButton.addEventListener("click", () => cyclePart("place", placeButton));
 objectButton.addEventListener("click", () => cyclePart("object", objectButton));
 emotionButton.addEventListener("click", () => cyclePart("emotion", emotionButton));
 
+// Shows the full story
 showButton.addEventListener("click", showStory);
+
+// Generates a random story
 randomButton.addEventListener("click", randomStory);
+
+// Resets the story to default state
 resetButton.addEventListener("click", resetStory);
+
+// Toggles between the two story sets
 toggleButton.addEventListener("click", toggleStorySet);
