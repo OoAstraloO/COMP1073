@@ -1,5 +1,5 @@
 // Toy Car Contrustor
-function ToyCar(
+function toyCar(
     brand, 
     model, 
     year, 
@@ -33,11 +33,16 @@ function ToyCar(
     this.stock = stock;
     this.sku = sku;
 }
+toyCar.prototype.displayInfo = function() 
+{
+    return `<h3>SKU: ${this.sku}</h3> <br>
+    <p>This ${this.vehicleType} car is a ${this.year} ${this.colour} ${this.brand} ${this.model}, with a scale of ${this.scale}. It was manufactured by ${this.manufacturer} and is made of ${this.material} with ${this.tireType} tires.  ${this.openingParts ? "It has" : "It does not have"} openning parts, ${this.detailedExterior ? "has" : "does not have"} a detailed exterior and ${this.collectible ? "is" : "is not"} a collectible. There are ${this.stock} currently in stock, priced at $${this.price}.</p>`
+};
 
 let carCollection = [];
 
 // Creates instance from form
-function CreateCar()
+function createCar()
 {
     const brand = document.getElementById("brand").value;
     const model = document.getElementById("model").value;
@@ -48,14 +53,14 @@ function CreateCar()
     const material = document.getElementById("material").value;
     const vehicleType = document.getElementById("vehicleType").value;
     const tireType = document.getElementById("tireType").value;
-    const openingParts = document.getElementById("openingParts").value;
-    const detailedExterior = document.getElementById("detailedExterior").value;
-    const collectible = document.getElementById("collectible").value;
+    const openingParts = document.getElementById("openingParts").checked;
+    const detailedExterior = document.getElementById("detailedExterior").checked;
+    const collectible = document.getElementById("collectible").checked;
     const price = document.getElementById("price").value;
     const stock = document.getElementById("stock").value;
     const sku = document.getElementById("sku").value;
 
-    const newCar = new ToyCar (
+    const newCar = new toyCar (
         brand,
         model,
         year,
@@ -76,3 +81,19 @@ function CreateCar()
     carCollection.push(newCar);
     displayCars();
 }
+
+function displayCars() 
+{
+    const container = document.getElementById("carList");
+    container.innerHTML = "";
+
+    carCollection.forEach((car, index) => {
+       const carCard = document.createElement("div");
+       carCard.className = "car-card";
+
+       carCard.innerHTML = `${car.displayInfo()}`;
+    
+       container.appendChild(carCard);
+    })
+}
+
