@@ -91,4 +91,49 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(220,20,60,0.3); 
 }
+/* Order summary */
+#orderSummary {
+  background: linear-gradient(#FFE4E1, #FADBD8); 
+  padding: 3rem;
+  text-align: center;
+}
+
+#orderSummary h2 {
+  color: #8B0000;
+  font-size: 2rem;
+}
+
+#bowlDescription {
+  background: #fff;
+  border-left: 4px solid #DC143C;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* Mobile  */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  form, #orderSummary {
+    padding: 2rem 1.5rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+}
+
 
