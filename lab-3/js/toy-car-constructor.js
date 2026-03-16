@@ -33,17 +33,20 @@ function toyCar(
     this.stock = stock;
     this.sku = sku;
 }
+// Prototype method to display formatted information about the car
 toyCar.prototype.displayInfo = function() 
 {
     return `<h3>SKU: ${this.sku}</h3> <br>
     <p>This ${this.vehicleType} car is a ${this.year} ${this.colour} ${this.brand} ${this.model}, with a scale of ${this.scale}. It was manufactured by ${this.manufacturer} and is made of ${this.material} with ${this.tireType} tires.  ${this.openingParts ? "It has" : "It does not have"} openning parts, ${this.detailedExterior ? "has" : "does not have"} a detailed exterior and ${this.collectible ? "is" : "is not"} a collectible. There are ${this.stock} currently in stock, priced at $${this.price}.</p>`
 };
 
+// Array to hold all created car instances
 let carCollection = [];
 
-// Creates instance from form
+// Creates a new car instance from form inputs
 function createCar()
 {
+    // Gets values from text inputs
     const brand = document.getElementById("brand").value;
     const model = document.getElementById("model").value;
     const year = document.getElementById("year").value;
@@ -60,6 +63,7 @@ function createCar()
     const stock = document.getElementById("stock").value;
     const sku = document.getElementById("sku").value;
 
+    // Creates new toyCar object
     const newCar = new toyCar (
         brand,
         model,
@@ -78,21 +82,29 @@ function createCar()
         sku 
     );
 
+    // Adds the new carc to the collection
     carCollection.push(newCar);
+
+    // Display all cars
     displayCars();
 }
 
+// Function to display all car instances in the #carList container
 function displayCars() 
 {
+    // Creates a card for each car
     const container = document.getElementById("carList");
     container.innerHTML = "";
 
+    // Loop through each car in the collection
     carCollection.forEach((car, index) => {
        const carCard = document.createElement("div");
        carCard.className = "car-card";
 
+       // Sets inner HTML of card to formatted card info
        carCard.innerHTML = `${car.displayInfo()}`;
     
+       // Append card to container
        container.appendChild(carCard);
     })
 }
