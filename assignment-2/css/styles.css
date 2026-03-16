@@ -1,1 +1,14 @@
 /* base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #8B0000, #DC143C); 
+  min-height: 100vh;
+  padding: 2rem;
+  color: #333;
+}
