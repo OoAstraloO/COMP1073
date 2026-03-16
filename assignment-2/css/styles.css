@@ -73,3 +73,22 @@ textarea {
   font-family: inherit;
   resize: vertical;
 }
+/* Buttons */
+button {
+  background: linear-gradient(#DC143C, #B22222); 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.25rem;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.3s; 
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220,20,60,0.3); 
+}
+
