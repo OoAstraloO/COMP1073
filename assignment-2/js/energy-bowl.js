@@ -12,8 +12,7 @@ class EnergyBowl
 
     getDescription()
     {
-        return 
-        `
+        return `
         <h2>Your Energy Bowl:</h2>
         <p><strong>Size:</strong> ${this.size}</p>
         <p><strong>Base:</strong> ${this.base}</p>
