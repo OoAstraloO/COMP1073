@@ -11,4 +11,7 @@ document.getElementById("bowlForm").addEventListener("submit", function(event)
     const protein = document.getElementById("protein").value;
     const instructions = document.getElementById("instructions").value;
 
+    const energyBowl = new EnergyBowl(size, base, fruits, toppings, protein, instructions);
+
+    document.getElementById("orderSummary").innerHTML = energyBowl.getDescription();
 });
