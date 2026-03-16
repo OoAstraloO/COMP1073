@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Lab 3 | COMP1073 Client-Side JavaScript</title>
-	<link href="css/normalize.css" rel="stylesheet" />
-	<link href="css/styles.css" rel="stylesheet" />
-	<script src="js/toy-car-constructor.js"></script>
-</head>
-<body>
-	<h1>Lab 1</h1>
-	<p>This script will enable the user to adjust the below range input elements to modify the <abbr title="Red, Green, Blue">RGB</abbr> values of the <code>background-color</code> CSS property of the HTML element.</p>
+	<head>
+		<meta charset="utf-8" />
+		<title>Lab 3 | COMP1073 Client-Side JavaScript</title>
+		<link href="css/normalize.css" rel="stylesheet" />
+		<link href="css/styles.css" rel="stylesheet" />
+		<script src="js/toy-car-constructor.js"></script>
+	</head>
+	<body>
+		<h1>Lab 3</h1>
+		
+		<h2>Toy Car Creator</h2>
 
-</body>
+		<div class="form">
+			<input type=text id="brand" placeholder="Brand (ex. Chevrolet)" required>
+			<br>
+			<br>
+			<input type=text id="model" placeholder="Model (ex. Corvette Z06)" required>
+			<br>
+			<br>
+			<input type=text id="year" placeholder="Year (ex. 2012)" required>
+			<br>
+			<br>
+			<input type=text id="colour" placeholder="Colour (ex. Red)" required>
+			<br>
+			<br>
+			<input type=text id="scale" placeholder="Scale (ex. 1/64)" required>
+			<br>
+			<br>
+			<input type=text id="manufacturer" placeholder="Manufacturer (ex. Johnny Lightning)" required>
+			<br>
+			<br>
+			<input type=text id="material" placeholder="Material (ex. Metal)" required>
+			<br>
+			<br>
+			<input type=text id="vehicleType" placeholder="Vehicle Type (ex. Sports)" required>
+			<br>
+			<br>
+			<input type=text id="tireType" placeholder="Tire Type (ex. Rubber)" required>
+			<br>
+			<br>
+			<label>Opening Parts <input type="checkbox" id="openingParts" required></label>
+			<br>
+			<label>Detailed Exterior <input type="checkbox" id="detailedExterior" required></label>
+			<br>
+			<label>Collectible <input type="checkbox" id="collectible" required></label>
+			<br>
+			<br>
+			<input type=text id="price" placeholder="Price (ex. 9.99)" required>
+			<br>
+			<br>
+			<input type=text id="stock" placeholder="Stock Amount (ex. 20)" required>
+			<br>
+			<br>
+			<input type=text id="sku" placeholder="SKU (ex. JLSP245A)" required>
+			<br>
+			<br>
+			<button onclick="createCar()">Create Toy Car</button>
+		</div>
+		<div id="carList"></div>
+	</body>
 </html>
-
-
 
 
 
