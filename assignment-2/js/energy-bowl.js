@@ -23,7 +23,7 @@ class EnergyBowl
         <p><strong>Fruits:</strong> ${this.fruits.join(", ")}</p>
         <p><strong>Toppings:</strong> ${this.toppings.join(", ")}</p>
         <p><strong>Protein:</strong> ${this.protein}</p>
-        <p><strong>Instructions:</strong> ${this.instructions}</p>
+        <p><strong>Special Instructions:</strong> ${this.instructions}</p>
         `;
     }
 }
