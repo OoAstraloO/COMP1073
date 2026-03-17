@@ -7,14 +7,14 @@ document.getElementById("bowlForm").addEventListener("submit", function(event)
     // Gets the values from the form inputs and stores them in variables
     const size = document.querySelector("input[name='size']:checked").value;
     const base = document.querySelector("input[name='base']:checked").value;
+    const protein = document.querySelector("input[name='proteins']:checked").value;
+    const instructions = document.querySelector("textarea[name='instructions']").value;
+
     // Creates arrays to store the selected fruits and toppings, poppulating them with the values of the boxes that are checked
     const fruits = [];
     document.querySelectorAll("input[name='fruits']:checked").forEach(input => fruits.push(input.value));
     const toppings = [];
     document.querySelectorAll("input[name='toppings']:checked").forEach(input => toppings.push(input.value)); 
-    // Gets the values from the form inputs and stores them in variables
-    const protein = document.querySelector("input[name='proteins']:checked").value;
-    const instructions = document.querySelector("textarea[name='instructions']").value;
 
     // Creates a new instance of the EnergyBowl class using the values from the form inputs
     const energyBowl = new EnergyBowl(size, base, fruits, toppings, protein, instructions);
