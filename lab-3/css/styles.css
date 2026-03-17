@@ -1,9 +1,11 @@
+/*Styles for the entire page */
 body 
 {
     font-family:'Courier New', Courier, monospace;
     background: #ccc;
     text-align: center;
 }
+/*Styles for headings*/
 h1
 {
     color: #333;
@@ -20,18 +22,20 @@ h3
     text-align: left;
     text-transform: uppercase;
 }
-
+/*Styles for paragraphs*/
 p
 {
     color: #333;
     text-align: left;
 }
 
+/* Styles for the form class*/
 .form 
 {
     margin: 20px;
 }
 
+/*Styles for labels*/
 label
 {
     display: block;
@@ -39,12 +43,12 @@ label
     font-size: 16px;
 }
 
+/*Styles for text input and checkboxes*/
 input[type="text"]
 {
     padding: 8px;
     width: 350px;
 }
-
 label input[type="checkbox"]
 {
     transform: scale(1.5);
@@ -52,6 +56,7 @@ label input[type="checkbox"]
     margin-left: 10px;
 }
 
+/*Styles for the submit button*/
 button 
 {
     padding: 8px 14px;
@@ -60,7 +65,7 @@ button
     border:none;
     box-shadow: 3px 3px 6px #333;
 }
-
+/*Styles for the car summary section*/
 .car-card 
 {
     background:white;
