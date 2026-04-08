@@ -16,8 +16,8 @@ function addToList()
     const span = document.createElement("span");
     span.textContent = text;
 
-    const deleteTask = document.createElement("button")
-    deleteTesk.textContent = "Delete";
+    const deleteTask = document.createElement("button");
+    deleteTask.textContent = "Delete";
 
     li.appendChild(checkbox);
     li.appendChild(span);
