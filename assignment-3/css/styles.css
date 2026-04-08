@@ -1,12 +1,18 @@
 body 
 {
     font-family: 'Times New Roman', Times, serif;
-    background: linear-gradient(to bottom, #248d7a, #acb6e5);
-    display: column;
+    background: linear-gradient(to bottom, #248d7a, #93ebd5);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin:0;
+}
+
+h1
+{
+    text-align: center;
 }
 
 .container 
@@ -16,4 +22,83 @@ body
     border-radius: 10px;
     width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inputSection 
+{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#taskInput 
+{
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+}
+
+#addTask
+{
+    padding: 7px 14px;
+    background: #e7f1ea;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+#addTask:hover 
+{
+    background-color:#57a899;
+    color: white;
+}
+
+#taskList 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0 14px;
+    box-sizing: border-box;
+}
+
+#taskList li 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 14px;
+    margin-top: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+#taskList li span
+{
+    flex: 1;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+#taskList li.completed span 
+{
+    text-decoration: line-through;
+    color: #666;
+    font-style: italic;
+}
+
+#taskList li button
+{
+    padding: 7px 14px;
+    background: #e7f1ea;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+#taskList li button:hover
+{
+    background-color: #57a899; 
 }

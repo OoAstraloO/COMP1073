@@ -25,13 +25,13 @@ function addToList()
 
     taskList.appendChild(li);
 
-    tastInput.value = "";
+    taskInput.value = "";
 
     checkbox.addEventListener("change", function()
     {
         if (checkbox.checked)
         {
-            li.classList.add("completed");
+            span.classList.add("completed");
             list.appendChild(li);
         }
         else
