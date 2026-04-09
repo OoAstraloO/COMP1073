@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>COMP1073 | Assignment 3 - To-Do List</title>
+        <!--Links external CSS-->
         <link href="css/normalize.css" rel="stylesheet" />
 		<link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -10,14 +11,17 @@
     <body>
         <h1>To-Do List</h1>
 
+        <!--Main container for To-Do List-->
         <div class="container">
+            <!--Input & Add Task Button container-->
             <div class="inputSection">
                 <input type="text" id="taskInput" placeholder="Enter a new task...">
                 <button id="addTask">Add Task</button>
             </div>
-
+            <!--Unordered list for each task to be added to using JaveScript -->
             <ul id="taskList"></ul>
         </div>
+        <!--Links external JavaScript-->
         <script src="js/todolist.js"></script>     
     </body>
 </html>
